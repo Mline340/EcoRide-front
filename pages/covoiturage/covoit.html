@@ -1,0 +1,87 @@
+<div class= "hero-scene text-center">
+    <div class="hero-scene-contant">
+    <p>Covoiturages Disponibles</p>
+    </div>
+</div>
+
+
+<div class="container text-center">
+    <div class="pt-4 pb-3">
+          <p>Rechercher un trajet</p>
+    </div>
+ </div>
+    <article>
+         <div classe="covoit"> 
+                <div class="row justify-content-center">
+                    <div class = "col-12 col-md-6 col-lg-4 mb-3">
+                    <input type="text" class="form-control" id="DepartInput" placeholder="Lieu de départ ..." style="border: 2px solid #333;"> 
+                     </div>
+                    <div class = "col-12 col-md-6 col-lg-4 mb-3">
+                     <input type="text" class="form-control" id="ArriveeInput" placeholder="Lieu d'arrivée ..." style="border: 2px solid #333;"> 
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                     <div class="col-12 col-md-6 col-lg-4 mb-3">
+                     <input type="date" class="form-control" id="DateInput" placeholder="Date ..." style="border: 2px solid #333;"> 
+                     </div>
+                    <div class = "col-12 col-md-6 col-lg-4 mb-3">
+                    <a  href ="/covoit" class="btn btn-secondary">Rechercher un covoiturage</a>
+                     </div>
+                </div> 
+                 <div class="text-center">
+                    <p>**Platforme dédiée pour les déplacements en voiture uniquement** </p>  
+                 </div>   
+         </div>         
+</article>
+
+<div class="filtre">
+    <div class="ms-2 ms-md-4 ms-lg-5">    
+             <button onclick="showHideForm()" type="button" class="btn"><u>Filtres</u></button>
+    </div>
+     <div class="filter-search">
+        <form class="filter-form">
+            <div class="ms-2 ms-md-4 ms-lg-5">
+                <div class="me-2 me-md-4 me-lg-5">
+                    <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <label for="ecologique">Voyage écologique</label>
+                        <div class="form-row">
+                        <select name="voyage-ecologique" class="custom-select">
+                            <option value=""></option>
+                            <option value="">Oui</option>
+                            <option value="">Non</option>
+                            <option value="">Peu importe</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="budget">Budget maximum (€)</label>
+                        <div class="form-row">
+                        <input type="number" class="form-control" id="budgetMax" placeholder="Ex: 20" min="0" step="5">
+                        <div class="form-text">Entrez votre budget maximum en euros</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="duree">Durée maximale (h)</label>
+                        <div class="form-row">
+                        <input type="number" class="form-control" id="DureeMax" placeholder="Ex: 2" min="0" step="1">
+                        <div class="form-text">Entrez votre durée maximale en heure</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="Note">Note minimale sur 5</label>
+                        <div class="form-row">
+                        <input type="number" class="form-control" id="DureeMax" placeholder="Ex: 4" min="0" step="1">
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                    <button type="button" class="btn btn-secondary" id="btnFiltre">Filtrer</button>
+                    </div>    
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

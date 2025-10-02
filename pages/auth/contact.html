@@ -1,0 +1,123 @@
+<div class= "hero-scene text-center">
+    <div class="hero-scene-contant">
+    <p>Nous contacter</p> 
+    </div>
+</div>
+<div class="contact-container">
+    <div class="form-card">
+     <form id="contactForm" novalidate>
+                <!-- Nom complet -->
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom complet <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nom" name="nom" required 
+                           placeholder="Jean Dupont" minlength="2">
+                    <div class="invalid-feedback">
+                        Veuillez entrer votre nom (minimum 2 caractères).
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required 
+                           placeholder="exemple@email.com">
+                    <div class="invalid-feedback">
+                        Veuillez entrer une adresse email valide.
+                    </div>
+                </div>
+                <!-- Sujet -->
+                <div class="mb-3">
+                    <label for="sujet" class="form-label">Sujet <span class="text-danger">*</span></label>
+                    <select class="form-select" id="sujet" name="sujet" required>
+                        <option value="">Choisissez un sujet...</option>
+                        <option value="information">Demande d'information</option>
+                        <option value="devis">Avis</option>
+                        <option value="support">Support technique</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Veuillez sélectionner un sujet.
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required 
+                              placeholder="Écrivez votre message ici..." minlength="10"></textarea>
+                    <div class="invalid-feedback">
+                        Veuillez entrer un message (minimum 10 caractères).
+                    </div>
+                </div>
+
+                <!-- Case à cocher RGPD -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rgpd" name="rgpd" required>
+                    <label class="form-check-label" for="rgpd">
+                        J'accepte que mes données soient utilisées pour me recontacter <span class="text-danger">*</span>
+                    </label>
+                    <div class="invalid-feedback">
+                        Vous devez accepter avant de soumettre le formulaire.
+                    </div>
+                </div>
+
+                <!-- Boutons -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">
+                        Envoyer le message
+                </div>
+            </form>
+
+            <!-- Message de succès -->
+            <div class="success-message alert alert-success" role="alert">
+                <h5 class="alert-heading">Message envoyé avec succès !</h5>
+                <p class="mb-0">Merci pour votre message. Nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+    </div>
+</div>
+
+<!--
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMessage = document.querySelector('.success-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validation Bootstrap
+            if (!form.checkValidity()) {
+                e.stopPropagation();
+                form.classList.add('was-validated');
+                return;
+            }
+
+            // Simulation d'envoi (ici vous intégreriez votre logique d'envoi)
+            console.log('Formulaire soumis avec les données suivantes :');
+            console.log('Nom:', document.getElementById('nom').value);
+            console.log('Email:', document.getElementById('email').value);
+            console.log('Téléphone:', document.getElementById('telephone').value);
+            console.log('Sujet:', document.getElementById('sujet').value);
+            console.log('Message:', document.getElementById('message').value);
+
+            // Afficher le message de succès
+            successMessage.style.display = 'block';
+            form.reset();
+            form.classList.remove('was-validated');
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Réinitialiser la validation lors du reset
+        form.addEventListener('reset', function() {
+            form.classList.remove('was-validated');
+            successMessage.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+-->
+    

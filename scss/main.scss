@@ -1,0 +1,143 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import 'custom';
+
+html{
+    position: relative;
+    min-height: 100%;
+    margin:0%;
+    overflow-x: hidden;
+}
+
+
+
+// Navbar
+
+nav {
+    background-color: $primary;
+    font-family: $font-family-sans-serif;
+    color: white;
+   
+}
+.navbar-brand {
+    color: white;
+    
+}
+.nav-link {
+    color: white;
+    margin: 0 2rem;
+   
+
+}
+#navbar-title {
+    font-family:"Lumanosimo", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 200%;
+}
+// page accueil 
+    //Titre
+.home-scene {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../Image/van-bleu-2.jpg);
+        background-size: auto 125%;
+        background-repeat: no-repeat;
+        filter: brightness(0.5);
+    }
+   *{
+    position: relative;
+   }
+    padding-top: 50px;
+    font-size: clamp(15px, 5vw, 35px);
+    //margin: 2vw;
+
+}
+
+.container {
+    column-count: 2;
+    margin-top: 2em;
+    font-size: clamp(10px, 5vw, 25px);
+ 
+    
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+    //Présentation entreprise 
+.section {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.row {
+            display: flex;
+            flex-wrap: wrap;
+            column-count: 2;
+}
+.col-image {
+            flex: 1;
+            min-width: 300px;
+}
+.col-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+}
+
+//autres pages 
+.hero-scene {
+    padding-top: 50px;
+    font-size: clamp(15px, 5vw, 35px);
+    //margin: 2vw;
+}
+// Formulaire de contact
+.contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+ }
+.form-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+ }
+.success-message {
+            display: none;
+            margin-top: 20px;
+}
+
+// Footer
+main{margin-bottom: 200px;}
+footer.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: $primary;
+    font-family: $font-family-sans-serif; color: white;
+    
+}
+
+// historique
+.alltrajets{
+    a{
+        display: block;
+        color: $black;
+        padding: 10px;
+    }
+
+
+}
