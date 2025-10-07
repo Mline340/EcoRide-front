@@ -1,23 +1,32 @@
 // Implémenter le JS de ma page 
 
+const inputNom = document.getElementById("NomInput");
+const inputPrenom = document.getElementById("PernomInput");
+const inputNaissance = document.getElementById("NaissanceInput");
 const inputPseudo = document.getElementById("PseudoInput");
 const inputMail= document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
 
+inputNom.addEventListener("keyup", validateForm);
+inputPrenom.addEventListener("keyup", validateForm);
+inputNaissance.addEventListener("keyup", validateForm);
 inputPseudo.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidationPassword.addEventListener("keyup", validateForm);
 
 function validateForm(){
+    const nomOk = validateRequired(inputNom);
+    const prenomOk = validateRequired(inputPrenom);
+    const naissanceOk = validateRequired(inputNaissance);
     const pseudoOk = validateRequired(inputPseudo);
     const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
     const passwordconfirmOk = validateConfirmationPassword (inputPassword, inputValidationPassword);
 
-    if(pseudoOk && mailOk && passwordOk && passwordconfirmOk){
+    if(nomOk && prenomOk && naissanceOk && pseudoOk && mailOk && passwordOk && passwordconfirmOk){
         btnValidation.disabled = false;
     }
     else{

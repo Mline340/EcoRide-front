@@ -11,6 +11,9 @@ export const allRoutes = [
     new Route("/annonce", "Publier une annonce", "/pages/covoiturage/annonce.html", ["utilisateur"]),
     new Route("/contact", "Nous contacter", "/pages/auth/contact.html", []),
     new Route("/mentions", "Mentions legales", "/pages/mentions.html", []),
+    new Route("/information", "Mes informations", "/pages/auth/information.html", []),
+    new Route("/preference", "Mes préférences", "/pages/auth/preference.html", []),
+    new Route("/vehicule", "Mes véhicules", "/pages/auth/vehicule.html", []),
 
 ];
 
