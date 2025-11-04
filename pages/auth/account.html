@@ -13,6 +13,7 @@
             <a href="/historique">Historique trajets</a>
             
         </div>   
+
        
 </form>
 <div class="contact-container">
@@ -20,26 +21,17 @@
         <p class="pb-1">
         <a href="/information" style="color: black;"><strong>Mes informations</strong><i class="bi bi-pencil"></i></a>
         </p>
-        <button type="button" class="btn btn-secondary"><i class="bi bi-person"></i></button>
-        <input type="text" class="form-control" id="PseudoInput" placeholder="Votre Pseudo" name="Email"> 
-        <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom" name="Email"> 
-        <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom" name="Email"> 
-        <input type="text" class="form-control" id="telInput" placeholder="Téléphone" name="Email">
-        <input type="date" class="form-control" id="NaissanceInput" placeholder="date de naissance" name="Email">
-        <input type="entier" class="form-control" id="codeInput" placeholder="code postal" name="Email">
-        <input type="text" class="form-control" id="VilleInput" placeholder="Ville" name="Email">    
+        <div id="user-info">
+            Chargement des informations
+        </div>
     </div>
     <div class="form-card">
+         <p class="pb-1">
         <a href="/preference" style="color: black;"><strong>Mes préférences</strong><i class="bi bi-pencil"></i></a>
-        <p class="pt-1">
-            Passager: <input type="checkbox" name="passager" value="Passager">
-            Chauffeur: <input type="checkbox" name="chauffeur" value="chauffeur">
-            Passager/Chauffeur: <input type="checkbox" name="passager" value="Passager/ Chauffeur">
         </p>
-          <input type="number" class="form-control" id="PlaceInput" placeholder="Nombre de place disponible" name="text"> 
-          <input type="text" class="form-control" id="PreferenceInput" placeholder="Fumeur, Animaux..." name="text"> 
-          <textarea class="form-control" id="message" name="message" rows="5" required 
-                placeholder="Écrivez votre message ici..." minlength="10"></textarea>
+       <div id="preference-info">
+            Chargement des informations
+        </div>       
     </div>
     <div class="form-card">
         <a href="/vehicule" style="color: black;"><strong>Mes Véhicules</strong><i class="bi bi-pencil"></i></a>
@@ -54,8 +46,7 @@
     </div>
 
     
-     <div class="text-center pt-4">
-             <button type="button" class="btn btn-danger">Supprimer mon compte</button>
-
+    <div class="text-center pt-4">
+       <button type="button" class="btn btn-danger" onclick="supprimerMonCompte()"> Supprimer mon compte</button>
     </div>
 </div>

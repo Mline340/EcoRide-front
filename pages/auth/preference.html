@@ -8,16 +8,23 @@
     <div class="form-card">
         
         <p class="pt-1">
-            Passager: <input type="checkbox" name="passager" value="Passager">
-            Chauffeur: <input type="checkbox" name="chauffeur" value="chauffeur">
-            Passager/Chauffeur: <input type="checkbox" name="passager" value="Passager/ Chauffeur">
+            Passager: <input type="checkbox" name="passager" value="Passager" id="passagerInput">
+            Chauffeur: <input type="checkbox" name="chauffeur" value="chauffeur" id="chauffeurInput">
+            Passager/Chauffeur: <input type="checkbox" name="passager" value="Passager/ Chauffeur" id="paschauInput">
         </p>
-          <input type="number" class="form-control" id="PlaceInput" placeholder="Nombre de place disponible" name="text"> 
-          <input type="text" class="form-control" id="PreferenceInput" placeholder="Fumeur, Animaux..." name="text"> 
-          <textarea class="form-control" id="message" name="message" rows="5" required 
+        <p>
+             Animaux ok : <input type="checkbox" name="animaux" value="animaux" id="animauxInput">
+        </p>
+        <p>
+             Fumeur ok : <input type="checkbox" name="fumeur" value="fumeur" id="fumeurInput">
+        </p>
+        <p>
+            <input type="number" class="form-control" id="placeInput" placeholder="Nombre de place disponible" name="text"> 
+        </p>
+          <textarea class="form-control" id="messageInput" name="message" rows="5" required 
                 placeholder="Écrivez votre message ici..." minlength="10"></textarea>
     </div>
          <p class="text-center pt-3">
-        <button type="submit" class="btn btn-secondary">Enregistrer les modifications</button>
-        </p>
+        <button type="submit" class="btn btn-secondary" id="btnMaj">Enregistrer les modifications</button>
+         </p>
 </div>

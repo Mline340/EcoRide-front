@@ -54,26 +54,32 @@
      
     </main>
 
-       <footer class="footer text-center"style= "padding: 20px 0;">
-          <div class="row">
-            <div class="col-12 col-lg-4">
-                <a class="nav-link" href="/contact"><u>contact@ecoride.fr</u></a>
-            </div>
-            <div class="col-lg-4">
-              <p>© 2025 ECORIDE Tous droits réservés</p>
-            </div>
-            <div class="col-12 col-lg-4">
-                 <a class="nav-link" href="/mentions"><u>Mentions légales</u></a>
-            </div>
+    <footer class="footer text-center" style= "padding: 20px 0;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4">
+              <a class="nav-link" href="/contact"><u>contact@ecoride.fr</u></a>
           </div>
+          <div class="col-lg-4">
+            <p>© 2025 ECORIDE Tous droits réservés</p>
+          </div>
+          <div class="col-lg-4">
+                <a class="nav-link" href="/mentions"><u>Mentions légales</u></a>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="js/script.js"></script>
     <script type = "module" src="Router/router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type = "module" src="js/auth/contact.js"></script>
 
     <script text="javascript">
+        var isHidden = false;
         function showHideForm() {
-            document.getElementById("formulaireModification").hidden = false
+            document.getElementById("formulaireModification").hidden = isHidden;
+            isHidden = !isHidden;
         }
     </script>
 

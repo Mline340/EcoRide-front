@@ -3,33 +3,44 @@
     <p>Inscription</p>
   </div>
 </div>
-
-<div class="contact-container">
+  <div class="contact-container">
   <div class="form-card">
-     <form>
+     <form id="formulaireInscription">
           <div class="mb-3">
               <label for="NomInput" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom" name="Pseudo"> 
+              <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom" name="nom"> 
           </div>
           <div class="mb-3">
               <label for="PrenomInput" class="form-label">Prénom</label>
-              <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom" name="Pseudo"> 
+              <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom" name="prenom"> 
           </div>
           <div class="mb-3">
               <label for="NaissanceInput" class="form-label">Date de naissance</label>
-              <input type="date" class="form-control" id="NaissanceInput" name="Pseudo"> 
+              <input type="date" class="form-control" id="NaissanceInput" name="date_naissance"> 
+          </div>
+          <div class="mb-3">
+              <label for="VilleInput" class="form-label">Ville</label>
+              <input type="text" class="form-control" id="VilleInput" placeholder="Lieu de résidence" name="ville"> 
+          </div>
+          <div class="mb-3">
+              <label for="code_postalInput" class="form-label">Code Postal</label>
+              <input type="text" class="form-control" id="code_postalInput" placeholder="Code postal" name="code_postal"> 
+          </div>
+          <div class="mb-3">
+              <label for="telephoneInput" class="form-label">Téléphone</label>
+              <input type="text" class="form-control" id="telephoneInput" placeholder="Votre téléphone" name="telephone"> 
           </div>
           <div class="mb-3">
               <label for="PseudoInput" class="form-label">Pseudo</label>
-              <input type="text" class="form-control" id="PseudoInput" placeholder="Votre Pseudo" name="Pseudo"> 
+              <input type="text" class="form-control" id="PseudoInput" placeholder="Votre Pseudo" name="pseudo"> 
           </div>
           <div class="mb-3">
               <label for="EmailInput" class="form-label">Email</label>
-              <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email"> 
+              <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="email"> 
           </div>
           <div class="mb-3">
               <label for="PasswordInput" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control" id="PasswordInput" name="Password">
+              <input type="password" class="form-control" id="PasswordInput" name="password">
                 <div class="invalid-feedback">
                    Le mot de pass n'est pas assez robuste : au moins 8 caractères, comprenant au moins 1 lettre majuscule, 1 minuscule, 1chiffre et 1 caractère spéciale
                 </div>
@@ -39,13 +50,13 @@
           </div> 
           <div class="mb-3">
               <label for="ValidatePasswordInput" class="form-label"> Confirmez votre mot de passe</label>
-              <input type="password" class="form-control" id="ValidatePasswordInput" name="Password">
+              <input type="password" class="form-control" id="ValidatePasswordInput">
                 <div class="invalid-feedback">
                    La confirmation n'est pas identique au mot de passe
                 </div>
           </div>      
           <div class="text-center">
-            <button type="submit" class="btn btn-secondary" id="btn-validation-inscription">Inscription</button>
+            <button type="button" class="btn btn-secondary" id="btn-validation-inscription">Inscription</button>
           </div>
           <div class="text-center pt-3">
               <a href="/signin">Vous avez déjà un compte ! Connectez-vous ici !</a>
@@ -53,3 +64,5 @@
     </form>
   </div>
 </div>
+
+

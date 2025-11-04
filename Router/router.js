@@ -46,27 +46,40 @@ const LoadContentPage = async () => {
   }
 
 
-  // Récupération du contenu HTML de la route
-  const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
-  // Ajout du contenu HTML à l'élément avec l'ID "main-page"
-  document.getElementById("main-page").innerHTML = html;
+// Récupération du contenu HTML de la route
+const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
+// Ajout du contenu HTML à l'élément avec l'ID "main-page"
+document.getElementById("main-page").innerHTML = html;
 
-  // Ajout du contenu JavaScript
-  if (actualRoute.pathJS != "") {
-    // Création d'une balise script
-    var scriptTag = document.createElement("script");
-    scriptTag.setAttribute("type", "text/javascript");
-    scriptTag.setAttribute("src", actualRoute.pathJS);
-
-    // Ajout de la balise script au corps du document
-    document.querySelector("body").appendChild(scriptTag);
-  }
-
-  // Changement du titre de la page
-  document.title = actualRoute.title + " - " + websiteName;
+// Ajout du contenu JavaScript APRÈS que le DOM soit mis à jour
+if (actualRoute.pathJS != "") {
+  // Attendre un peu plus longtemps pour que le HTML soit rendu
+  await new Promise(resolve => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(resolve);
+    });
+  });
   
-  //Afficher et masquer les éléments en fonction de leur rôle
-  showAndHideElementsForRoles();
+  // Supprimer l'ancien script s'il existe pour éviter les doublons
+  const oldScript = document.querySelector(`script[src="${actualRoute.pathJS}"]`);
+  if (oldScript) {
+    oldScript.remove();
+  }
+  
+  // Création d'une balise script
+  var scriptTag = document.createElement("script");
+  scriptTag.setAttribute("type", "text/javascript");
+  scriptTag.setAttribute("src", actualRoute.pathJS);
+
+  // Ajout de la balise script au corps du document
+  document.querySelector("body").appendChild(scriptTag);
+}
+
+// Changement du titre de la page
+document.title = actualRoute.title + " - " + websiteName;
+
+//Afficher et masquer les éléments en fonction de leur rôle
+showAndHideElementsForRoles();
 };
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
