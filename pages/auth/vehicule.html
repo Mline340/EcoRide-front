@@ -6,13 +6,24 @@
 
 <div class="contact-container">
     <div class="form-card">
-        <input type="text" class="form-control" id="ModeleInput" placeholder="Modèle de votre voiture" name="Email"> 
-        <input type="text" class="form-control" id="ImmatInput" placeholder="Immatriculation" name="Email"> 
-        <input type="text" class="form-control" id="EnergieInput" placeholder="Moteur" name="Email"> 
-        <input type="text" class="form-control" id="CouleurInput" placeholder="La couleur de votre voirture" name="Email">
-        <input type="date" class="form-control" id="DateImmatInput" placeholder="date de la première immatriculation" name="Email">  
+        <input type="text" class="form-control" id="modele" placeholder="Modèle de votre voiture" name="modele"> 
+        <input type="text" class="form-control" id="immatriculation" placeholder="Immatriculation" name="immatriculation"> 
+        <input type="text" class="form-control" id="couleur" placeholder="La couleur de votre voirture" name="couleur">
+        <input type="date" class="form-control" id="dateImma" placeholder="date de la première immatriculation" name="dateImmat">  
+        <div class="form-group">
+    <select class="form-control" id="energie" name="energie" required>
+        <option value="">Sélectionnez une énergie</option>
+        <option value="Essence">Essence</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Electrique">Électrique</option>
+        <option value="Hybride">Hybride</option>
+        <option value="Hybride rechargeable">Hybride rechargeable</option>
+        <option value="GPL">GPL</option>
+        <option value="Hydrogène">Hydrogène</option>
+    </select>
+</div>
     </div>
-     <p class="text-center pt-3">
-        <button type="submit" class="btn btn-secondary">Ajout du véhicule</button>
-    </p>
+    <p class="text-center pt-3">
+        <button type="submit" class="btn btn-secondary" id="btn-validation-voiture">Ajout du véhicule</button>
+         </p>
 </div>

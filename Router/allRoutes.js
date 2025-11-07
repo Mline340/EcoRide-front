@@ -8,12 +8,12 @@ export const allRoutes = [
     new Route("/signup", "Inscription", "/pages/auth/signup.html", ["disconnected"], "/js/auth/signup.js"),
     new Route("/account", "Mon compte", "/pages/auth/account.html", [], "/js/auth/account.js"),
     new Route("/historique", "Historique trajets", "/pages/covoiturage/historique.html", ["utilisateur", "employe", "admin"],),
-    new Route("/annonce", "Publier une annonce", "/pages/covoiturage/annonce.html", ["utilisateur"]),
+    new Route("/annonce", "Publier une annonce", "/pages/covoiturage/annonce.html", [], "/js/covoiturage/annonce.js"),
     new Route("/contact", "Nous contacter", "/pages/auth/contact.html", []),
     new Route("/mentions", "Mentions legales", "/pages/mentions.html", []),
     new Route("/information", "Mes informations", "/pages/auth/information.html", [], "/js/auth/information.js"),
     new Route("/preference", "Mes préférences", "/pages/auth/preference.html", [], "/js/auth/preference.js"),
-    new Route("/vehicule", "Mes véhicules", "/pages/auth/vehicule.html", []),
+    new Route("/vehicule", "Mes véhicules", "/pages/auth/vehicule.html", [], "/js/auth/vehicule.js"),
 
 ];
 

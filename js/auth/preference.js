@@ -1,3 +1,4 @@
+
 function initInformationPage() {
     const btnMaj = document.getElementById("btnMaj");
     
@@ -63,7 +64,7 @@ function envoyerDonnees(token, passager, chauffeur, paschau, animaux, fumeur, nb
     };
     
     
-    const endpoint = `http://localhost:8000/api/preference`;
+    const endpoint = `http://localhost:8000/api/preference/${userId}`;
     
     console.log("🔗 Endpoint appelé:", endpoint); // Pour vérifier l'URL
     console.log("📦 Données envoyées:", data); // Pour vérifier les données
@@ -102,6 +103,7 @@ function envoyerDonnees(token, passager, chauffeur, paschau, animaux, fumeur, nb
             alert("Erreur lors de la modification: " + error.message);
         });
 }
+
 // Fonction appelée par le router
 window.onPageLoadedInformation = function () {
     console.log("✅ HTML de la page Information injecté → Init…");
