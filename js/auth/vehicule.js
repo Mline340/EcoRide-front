@@ -80,9 +80,11 @@ function AjoutVoiture(token, modele, immatriculation, energie, couleur, dateImma
         immatriculation: immatriculation,
         energie: energie,
         couleur: couleur,
-        datePremiereImmatriculation: dateImma
+        date_premiere_immatriculation: dateImma
     });
     
+    const userId = localStorage.getItem("userId");
+
     fetch(`http://localhost:8000/api/voiture/${userId}`, {
         method: 'POST',
         headers: myHeaders,

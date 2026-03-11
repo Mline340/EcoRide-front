@@ -63,6 +63,7 @@ function envoyerDonnees(token, passager, chauffeur, paschau, animaux, fumeur, nb
         redirect: "follow"
     };
     
+    const userId = localStorage.getItem("userId");
     
     const endpoint = `http://localhost:8000/api/preference/${userId}`;
     
