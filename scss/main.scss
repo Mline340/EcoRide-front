@@ -54,22 +54,102 @@ nav {
    }
     padding-top: 50px;
     font-size: clamp(15px, 5vw, 35px);
-    //margin: 2vw;
-
 }
 
 .container {
-    column-count: 2;
     margin-top: 2em;
     font-size: clamp(10px, 5vw, 25px);
- 
-    
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    p {
+        flex: 1 1 200px;
+    }
 }
 
 .text-justify{
     text-align: justify;
 }
 
+//Page recherche covoiturage 
+.covoit-container{
+     max-width: 600px;
+     margin: 50px auto;
+     @media (min-width: 1024px){
+        max-width: 900px;
+     }
+
+}
+.form-covoit{
+     background: rgb(176, 206, 159);
+     border-radius: 18px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     padding: 30px;
+     @media (min-width: 1024px){
+        padding: 50px; 
+     }
+
+}
+//Filtre 
+.btn{
+    font-size:large;
+}
+.filtre-container {
+    max-width: 600px;
+    margin: 50px auto;
+
+    @media (min-width: 1024px) {
+        max-width: 900px;
+    }
+}
+
+.form-filtre {
+    background: rgb(176, 206, 159);
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+
+    @media (min-width: 1024px) {
+        padding: 50px;
+    }
+}
+
+.filter-form {
+    .row {
+        gap: 20px 0; // espace vertical entre les lignes
+    }
+
+    .col-lg-4,
+    .form-group {
+        padding: 0 15px; // espace horizontal entre les colonnes
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .form-control,
+    .custom-select {
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 5px;
+    }
+
+    .form-text {
+        margin-top: 4px;
+        font-size: 0.8em;
+        color: #555;
+    }
+
+    .btn-secondary {
+        margin-top: 10px;
+        padding: 8px 30px;
+    }
+}
     //Présentation entreprise 
 
 //autres pages 

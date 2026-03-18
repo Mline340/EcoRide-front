@@ -36,6 +36,11 @@ const LoadContentPage = async () => {
         window.location.replace("/");
       }
     }
+    else if (allRolesArray.includes("connected")) {
+        if (!isConnected()) {
+            window.location.replace("/");
+        }
+    }
     else{
       const roleUSer = getRole();
       if(!allRolesArray.includes(roleUSer)){

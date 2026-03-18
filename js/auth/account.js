@@ -134,7 +134,7 @@ if (userPrefElement) {
   const lignes = [
     { label: 'Passager', value: data.passager === true ? 'Oui' : data.passager },
     { label: 'Chauffeur', value: data.chauffeur === true ? 'Oui' : data.chauffeur },
-    { label: 'Passager / Chauffeur', value: data.pas_chau === true ? 'Oui' : data.pas_chau },
+    { label: 'Passager / Chauffeur', value: data.PasChau === true ? 'Oui' : data.pas_chau },
     { label: 'Animaux', value: data.animaux === true ? 'J\'accepte les animaux' : data.animaux },
     { label: 'Fumeur', value: data.fumeur === true ? 'J\'accepte les fumeurs ' : data.fumeur },
     { label: 'Nombre de place', value: data.NbrPlace },

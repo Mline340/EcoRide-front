@@ -33,23 +33,17 @@ function checkCredentials(){
         } 
     }) 
     .then(result => { 
-        // Il faudra récupérer le vrai token 
-        const token = result.apiToken; 
-        setToken(token); 
-        //placer ce token en cookie 
-        
-        // Stockage de l'userId 
-        if (result.userId) { localStorage.setItem("userId", result.userId); 
-            console.log("UserId stocké:", result.userId); 
-        } else if (result.id) { 
-            // Au cas où votre API renvoie "id" au lieu de "userId"
-             localStorage.setItem("userId", result.id); 
-             console.log("UserId stocké:", result.id);
-             } else { 
-                console.warn("⚠️ Aucun userId trouvé dans la réponse de l'API");
-        } 
-        
-        setCookie(RoleCookieName, result.roles, 7);
-        window.location.replace("/"); }) 
-        .catch(error => console.log('error', error));
+    const token = result.apiToken; 
+    setToken(token);          
+    localStorage.setItem("token", token); 
+
+    if (result.userId) { 
+        localStorage.setItem("userId", result.userId); 
+    } else if (result.id) { 
+        localStorage.setItem("userId", result.id); 
     }
+    
+    setCookie(RoleCookieName, result.roles, 7);
+    window.location.replace("/"); 
+})
+}
